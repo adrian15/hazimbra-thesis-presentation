@@ -249,6 +249,61 @@ HA: System design approach that ensures that a prearranged level of operational 
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{LAB - Zimbra OCF Resource Agent Development (1/2)}
+
+\begin{itemize}
+
+\item  {OCF: Standardized interface for a cluster resource}
+\item  {Cluster resource examples:
+  \begin{itemize}
+    \item IP address
+    \item DRBD partition
+    \item Filesystem mount
+    \item Zimbra server
+  \end{itemize}
+}
+
+\item Specific steps to the resource or application
+\item  {Result: Success or Failure}
+
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{LAB - Zimbra OCF Resource Agent Development (2/2)}
+
+\begin{block}{}
+bTactic Zimbra OCF Resource Agent actions
+\end{block}
+
+\begin{itemize}
+
+  \item {\textbf{start . Starts the Zimbra resource}
+    \begin{itemize}
+      \item Exit 0 (Zimbra starts OK)
+      \item Exit != 7 or Exit != 0 (Zimbra fails to start)
+    \end{itemize}
+  }
+  \item {\textbf{stop . Stops the Zimbra resource}
+    \begin{itemize}
+      \item Exit 0 (Zimbra stops OK)
+      \item Exit != 7 or Exit != 0 (Zimbra fails to stop)
+    \end{itemize}
+  }
+  \item {\textbf{monitor . Monitors Zimbra resource health}
+    \begin{itemize}
+      \item Exit 0 (Zimbra is running)
+      \item Exit 7 (Zimbra is stopped)
+      \item Exit != 7 or Exit != 0 (Zimbra monitor has failed)
+    \end{itemize}
+  }
+  \item {\textbf{meta-data} : Provide information about Zimbra resource as an XML snippet. Exit 0.}
+
+\end{itemize}
+\end{frame}
+
 %\section {HA System Management}
 \section {Live DEMO}
 \section {Future work}
