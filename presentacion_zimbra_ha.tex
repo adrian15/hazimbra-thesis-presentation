@@ -1,0 +1,273 @@
+% $Header: /cvsroot/latex-beamer/latex-beamer/solutions/generic-talks/generic-ornate-15min-45min.en.tex,v 1.4 2004/10/07 20:53:08 tantau Exp $
+
+\documentclass[10pt]{beamer}
+
+\definecolor{verdfosc}{rgb}{0,0.2,0}
+
+
+\newsavebox{\savepar}
+\newenvironment{boxit}%
+{\begin{lrbox}{\savepar}
+  \begin{minipage}[b]{20cm}}
+{\end{minipage}\end{lrbox}\fbox{\usebox{\savepar}}}
+
+
+\newenvironment{quadre}[1]%
+{\begin{center}\begin{lrbox}{\savepar}
+  \begin{minipage}[b]{#1 cm}}
+{\end{minipage}\end{lrbox}\fbox{\usebox{\savepar}}\end{center}}
+
+\newenvironment{codi}[1]%
+{\begin{small}
+ \color{verdfosc}
+ \begin{quadre}{#1}  
+ 
+
+ }
+{ 
+  \end{quadre}
+  \end{small} 
+  \normalcolor
+}
+
+
+
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % or ...Warsaw Malmoe, Singapore, PaloAlto, Warsaw, Copenhagen
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{color}
+\usepackage{listings}
+%Listings setup:
+\definecolor{grey}{rgb}{0.8,0.8,0.8}
+
+\lstloadlanguages{Java,XML}
+
+\lstset{language=Java,
+        numbers=left, 
+        numberstyle=\footnotesize, 
+        numbersep=7pt,
+        frame=shadowbox, 
+        framexleftmargin=5mm, 
+        xleftmargin=0.6cm,
+        rulesepcolor=\color{grey}
+       }
+
+
+
+
+
+
+
+%\usepackage{pstricks,pst-node,pst-tree}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\title[Zimbra 8 High Availability on Ubuntu 12.04]{Zimbra 8 High Availability on Ubuntu 12.04}
+
+%\subtitle{Free as in freedom}
+
+\author[Adri\'an Gibanel L\'opez] % (optional, use only with lots of authors)
+{Adri\'an Gibanel L\'opez}
+%{F.~Author\inst{1} \and S.~Another\inst{2}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[Universitat de Lleida] % (optional, but mostly needed)
+{Universitat de Lleida}
+
+%  \inst{1}%
+%  Department of Computer Science\\
+%  University of Somewhere
+%  \and
+%  \inst{2}%
+%  Department of Theoretical Philosophy\\
+%  University of Elsewhere}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[]{September 2013}
+
+%\subject{Cooperative Game Theory}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\definecolor{un}{rgb}{0.75,0,0}
+\definecolor{dos}{cmyk}{0.95,0,0.5,0.3}
+\definecolor{tres}{rgb}{0.85,0.75,0}
+\definecolor{quatre}{rgb}{0.2,0.4,0.9}
+
+
+\setbeamercolor{cyanBox}{fg=black,bg=cyan}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+%\section*{Outline}
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[section]
+  \end{frame}
+
+
+\section{Section1}
+
+
+\begin{frame}[fragile]
+\frametitle{Section1FrameTitle}
+
+\begin{block}{Block Title}
+This is inside a block.
+
+
+\end{block}
+
+Outside the block.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Another frametitle inside Section1}
+
+
+\begin{block}{}
+Inside the block.
+\end{block}
+
+
+\quad
+
+
+After quad:
+
+\begin{itemize}
+
+\item {\tt Remarqued item}
+
+Non remarqued text
+
+{\tt Remarqued text} 
+
+ \item {\tt Another remarqued item}
+
+Non remarqued text 2 
+
+\end{itemize}
+
+\end{frame}
+%*****************************************************
+
+
+\section{Section2}
+
+
+\begin{frame}[fragile]
+\frametitle{Section2FrameTitle}
+
+\begin{block}{Block Title}
+This is inside a block.
+
+
+\end{block}
+
+Outside the block.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Another frametitle inside Section1}
+
+
+\begin{block}{}
+Inside the block.
+\end{block}
+
+
+\quad
+
+
+After quad:
+
+\begin{itemize}
+
+\item {\tt Remarqued item}
+
+Non remarqued text
+
+{\tt Remarqued text} 
+
+ \item {\tt Another remarqued item}
+
+Non remarqued text 2 
+
+\end{itemize}
+
+\end{frame}
+%*****************************************************
+
+
+
+
+%-----------------------------------------------------
+
+%-----------------------------------------------------
+
+\begin{frame}
+
+\frametitle{Thank you!}
+
+
+\begin{center}
+Thank you!
+\end{center}
+
+
+
+
+\end{frame}
+
+%-----------------------------------------------------
+\end{document}
