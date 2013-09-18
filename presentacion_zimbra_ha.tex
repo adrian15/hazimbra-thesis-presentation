@@ -209,7 +209,7 @@ HA: System design approach that ensures that a prearranged level of operational 
 
 \begin{itemize}
 
-\item HA Active/Passive cluster for Zimbra
+\item \textbf{Thesis purpose: HA Active/Passive cluster for Zimbra}
 \item Minimize downtime due to Hardware or telecommunication failures
 \item Minimal Zimbra modifications
 \item Use of standard open source High Availability software
@@ -313,11 +313,17 @@ bTactic Zimbra OCF Resource Agent actions
 
 
 \begin{center}
-  \begin{itemize}
-    \item Resources check with {\tt crm\_mon}
-    \item Turn off active node
-    \item Stop resources manually
-  \end{itemize}
+    \begin{block}{Check resources}
+{\tt crm\_mon}
+    \end{block}
+    \begin{block}{Turn off active node}
+{\tt Forced power off and pasive node starts Zimbra}
+    \end{block}
+    \begin{block}{Stop resources manually}
+{\tt crm resource stop ZimbraServer}
+    \end{block}
+    
+
 \end{center}
 
 
@@ -342,7 +348,6 @@ bTactic Zimbra OCF Resource Agent actions
 
 \frametitle{Conclusions}
 
-
 \begin{center}
   \begin{itemize}
     \item Shared storage thanks to DRBD
@@ -351,9 +356,6 @@ bTactic Zimbra OCF Resource Agent actions
     \item Zimbra HA with OSE version implemented
   \end{itemize}
 \end{center}
-
-
-
 
 \end{frame}
 
