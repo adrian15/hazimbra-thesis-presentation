@@ -1,7 +1,4 @@
-Main tex file which generates final PDF is: zimbra_8_ha_ubuntu_12_04.tex
+Main tex file which generates final PDF is: presentacion_zimbra_ha.tex
 
-You can find at img/ :
-
-Original HA Schema file: ha_main_schema.dia
-Exported from DIA for your convenience: ha_main_schema.eps
+You can find additional files at img/ :
 
